@@ -15,7 +15,8 @@
             <a-asset-item id="dragon" src="models/dragon.glb"></a-asset-item>
         </a-assets>
         <a-marker type='pattern' url='./markers/pattern-Seurat.patt' marker>
-            <a-entity gltf-model="#dragon"></a-entity>
+            <a-entity gltf-model="#dragon" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+            </a-entity>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
