@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFrame Hands-on</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="dragon" src="models/dragon.glb"></a-asset-item>
+        </a-assets>
+        <a-entity gltf-model="#dragon" position="0 1.25 -5"></a-entity>
+        <a-sky color="#6EBAA7"></a-sky>
+    </a-scene>
+</body>
+
+</html>
