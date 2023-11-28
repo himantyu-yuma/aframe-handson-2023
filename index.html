@@ -5,22 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AFrame Hands-on</title>
+    <!-- A-Frameの読み込み -->
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- AR.js(A-Frame版)の読み込み -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
 
 <body>
     <a-scene embedded arjs>
+        <!-- assetsの定義（モデルなど） -->
         <a-assets>
             <a-asset-item id="dragon" src="models/dragon.glb"></a-asset-item>
         </a-assets>
         <a-marker type='pattern' url='./markers/pattern-Seurat.patt' marker>
+            <!-- マーカーを認識したときに出すEntityを中に定義 -->
             <a-entity gltf-model="#dragon" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
             </a-entity>
             <a-entity>
                 <a-text value="Happy New Year!!" color="black" width="6" align="center"></a-text>
             </a-entity>
         </a-marker>
+        <!-- AR用カメラ -->
         <a-entity camera></a-entity>
     </a-scene>
 </body>
